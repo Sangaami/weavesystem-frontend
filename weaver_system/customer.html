@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Customer - WeaveCare</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="header"><img src="images/logo.svg" alt="logo"><h1>Customer Portal</h1><div style="margin-left:auto"><button class="btn secondary" onclick="logout()">Logout</button></div></header>
+<main class="container">
+  <div id="custHero" class="role-hero"></div>
+  <div class="card-row">
+    <div class="card"><h3>Place Order</h3>
+      <div class="form-row">
+        <input id="cust_name" class="input" placeholder="Your name">
+        <input id="cust_prod" class="input" placeholder="Product name">
+        <input id="cust_qty" class="input" placeholder="Quantity" type="number">
+        <button class="btn" onclick="addOrderCust()">Order</button>
+      </div>
+    </div>
+    <div class="card"><h3>Products</h3><table class="table"><thead><tr><th>Product</th><th>Stock</th></tr></thead><tbody id="product_list"></tbody></table></div>
+  </div>
+
+  <div class="card"><h3>Your Orders</h3><table class="table"><thead><tr><th>Customer</th><th>Product</th><th>Qty</th></tr></thead><tbody id="order_list"></tbody></table></div>
+
+  <div class="footer">Questions? <a href="help.html">Contact us</a></div>
+</main>
+<script src="script.js"></script>
+<script>cust_init();</script>
+</body>
+</html>

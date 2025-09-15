@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WeaveCare - Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header"><img src="images/logo.svg" alt="logo"><h1>WeaveCare - Cooperative Weavers</h1></header>
+<main class="container">
+  <div class="login-wrap">
+    <div class="login-card">
+      <h2>Sign in</h2>
+      <p class="small">Use sample accounts for demo:</p>
+      <ul class="small">
+        <li>Manager: manager / mgr123</li>
+        <li>Weaver: weaver / weave123</li>
+        <li>Customer: customer / cust123</li>
+      </ul>
+      <form onsubmit="login(event)">
+        <div class="form-row">
+          <select id="role" class="input" required>
+            <option value="manager">Manager</option>
+            <option value="weaver">Weaver</option>
+            <option value="customer">Customer</option>
+          </select>
+          <input id="username" class="input" placeholder="Username" required>
+          <input id="password" class="input" placeholder="Password" required type="password">
+        </div>
+        <div class="form-row">
+          <button class="btn" type="submit">Login</button>
+          <button type="button" class="btn secondary" onclick="window.location.href='help.html'">Help / Contact</button>
+        </div>
+        <p id="loginMsg" class="small"></p>
+      </form>
+    </div>
+    <div class="hero-card" style="background-image:url('images/bg_weaver.svg');">
+      <!-- decorative hero -->
+    </div>
+  </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+
+:root{
+  --accent:#0ea5a4;
+  --muted:#6b7280;
+  --bg:#0f172a;
+  --card:#ffffff;
+  --glass: rgba(255,255,255,0.06);
+  --radius:12px;
+  --shadow: 0 6px 20px rgba(2,6,23,0.2);
+  --soft: 0 4px 10px rgba(15,23,42,0.06);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI,Arial; background:#f3f4f6;color:#0f172a;}
+.header{display:flex;align-items:center;gap:20px;padding:18px 32px;background:linear-gradient(90deg,#0f172a 0%, #064e3b 100%);color:#fff;}
+.header img{height:46px}
+.header h1{font-size:20px;margin:0}
+.container{max-width:1200px;margin:28px auto;padding:0 18px}
+.card-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-bottom:20px}
+.card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:var(--soft)}
+.big{padding:28px}
+.nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:18px}
+.btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;border:none;cursor:pointer}
+.btn.secondary{background:#fff;border:1px solid #e6e6e6;color:#0f172a}
+.form-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.input{padding:10px;border-radius:8px;border:1px solid #e6e6e6;min-width:200px}
+.table{width:100%;border-collapse:collapse;margin-top:12px}
+.table th, .table td{padding:10px;border-bottom:1px solid #eef2f7;text-align:left}
+.header-small{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.role-hero{height:220px;border-radius:12px;overflow:hidden;background-size:cover;background-position:center;margin-bottom:18px;display:flex;align-items:flex-end;padding:20px;color:white}
+.footer{padding:18px;text-align:center;color:var(--muted);margin-top:40px}
+.login-wrap{display:flex;align-items:stretch;min-height:80vh;gap:40px;padding:40px}
+.login-card{flex:1;background:white;padding:28px;border-radius:12px;box-shadow:var(--soft)}
+.hero-card{flex:1;border-radius:12px;overflow:hidden;background-size:cover;background-position:center;box-shadow:var(--soft)}
+.small{font-size:14px;color:var(--muted)}
+.success{color:green}
+.warn{color:#b45309}
+@media(max-width:800px){
+  .login-wrap{flex-direction:column;padding:20px}
+  .hero-card{height:220px}
+}

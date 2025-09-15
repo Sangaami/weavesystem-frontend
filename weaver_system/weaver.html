@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Weaver - WeaveCare</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="header"><img src="images/logo.svg" alt="logo"><h1>Weaver Panel</h1><div style="margin-left:auto"><button class="btn secondary" onclick="logout()">Logout</button></div></header>
+<main class="container">
+  <div id="wvHero" class="role-hero"></div>
+  <div class="card-row">
+    <div class="card"><h3>Profile</h3><p><strong id="wv_name">-</strong><br><span class="small" id="wv_skill">-</span></p></div>
+    <div class="card"><h3>Production</h3><p id="wv_prod">0</p></div>
+    <div class="card"><h3>Attendance</h3><p id="wv_att">0</p></div>
+    <div class="card"><h3>Wage/Unit</h3><p id="wv_wage">0</p></div>
+  </div>
+
+  <div class="card">
+    <h3>Mark Attendance / Add Production</h3>
+    <div class="form-row">
+      <button class="btn" onclick="wv_markPresent()">Mark Present</button>
+      <input id="wv_addprod" class="input" placeholder="Units today" type="number">
+      <button class="btn" onclick="wv_addProduction()">Add Production</button>
+    </div>
+  </div>
+
+  <div class="footer">Need help? <a href="help.html">Contact us</a></div>
+</main>
+<script src="script.js"></script>
+<script>wv_init();</script>
+</body>
+</html>

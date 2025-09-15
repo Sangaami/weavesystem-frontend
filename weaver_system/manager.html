@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Manager - WeaveCare</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="header"><img src="images/logo.svg" alt="logo"><h1>Manager Panel</h1><div style="margin-left:auto"><button class="btn secondary" onclick="logout()">Logout</button></div></header>
+<main class="container">
+  <div id="mgrHero" class="role-hero"></div>
+  <div class="header-small"><h2>Manager Dashboard</h2><div class="nav"><button class="btn" onclick="document.getElementById('addWeaverBox').scrollIntoView()">Add Weaver</button><button class="btn" onclick="document.getElementById('invBox').scrollIntoView()">Inventory</button><button class="btn secondary" onclick="window.location.href='help.html'">Help</button></div></div>
+  <div class="card-row">
+    <div class="card big"><h3>Total Weavers</h3><h1 id="stat_weavers">0</h1></div>
+    <div class="card big"><h3>Total Production</h3><h1 id="stat_prod">0</h1></div>
+    <div class="card big"><h3>Total Stock</h3><h1 id="stat_stock">0</h1></div>
+    <div class="card big"><h3>Total Sales</h3><h1 id="stat_sales">0</h1></div>
+  </div>
+
+  <div id="addWeaverBox" class="card">
+    <h3>Add Weaver</h3>
+    <div class="form-row">
+      <input id="mgr_wname" class="input" placeholder="Name">
+      <input id="mgr_wskill" class="input" placeholder="Skill">
+      <input id="mgr_wr" class="input" placeholder="Wage per unit" type="number">
+      <button class="btn" onclick="addWeaverMgr()">Add</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Weaver List</h3>
+    <table class="table"><thead><tr><th>Name</th><th>Skill</th><th>Production</th><th>Attendance</th><th>Rate</th><th>Actions</th></tr></thead><tbody id="weaver_list"></tbody></table>
+  </div>
+
+  <div id="invBox" class="card">
+    <h3>Inventory</h3>
+    <div class="form-row">
+      <input id="inv_name" class="input" placeholder="Item name">
+      <input id="inv_qty" class="input" placeholder="Quantity" type="number">
+      <button class="btn" onclick="addInventory()">Add Stock</button>
+    </div>
+    <table class="table"><thead><tr><th>Item</th><th>Qty</th><th>Action</th></tr></thead><tbody id="inv_list"></tbody></table>
+  </div>
+
+  <div class="footer">🧵 WeaveCare • Contact: weavercare@example.com</div>
+</main>
+<script src="script.js"></script>
+<script>mgr_init();</script>
+</body>
+</html>
